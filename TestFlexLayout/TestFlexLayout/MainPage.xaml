@@ -18,11 +18,11 @@
             <!--<Frame HeightRequest="40">-->
             
             <FlexLayout x:Name="st1" Direction="Row" Margin="20,0,20,0" >
-                <Label x:Name="L1" Text="Code" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
-                <Label x:Name="L2" Text="NameAr"  FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
-                <Label x:Name="L3" Text="NameEn" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
-                <Label x:Name="L4" Text="Short NameAr" FlexLayout.Basis="20%" />
-                <Label x:Name="L5" Text="Short NameEn" FlexLayout.Basis="20%" />                
+                <Label x:Name="L1" Text="Code" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                <Label x:Name="L2" Text="NameAr"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                <Label x:Name="L3" Text="NameEn" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                <Label x:Name="L4" Text="Short NameAr" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                <Label x:Name="L5" Text="Short NameEn" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>                
             </FlexLayout>
             
                 <!--</Frame>-->
@@ -35,11 +35,11 @@
                             <ViewCell>
                                 <StackLayout>
                                     <FlexLayout Direction="Row">
-                                        <Label Text="{Binding Code}"  FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
-                                        <Label Text="{Binding NameAr}"  FlexLayout.Basis="20%" />
-                                        <Label Text="{Binding NameEn}"  FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
-                                        <Label Text="{Binding ShortNameAr}" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
-                                        <Label Text="{Binding ShortNameEn}" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>                                        
+                                        <Label Text="{Binding Code}"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding NameAr}"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding NameEn}"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding ShortNameAr}" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding ShortNameEn}" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>                                        
                                     </FlexLayout>                                        
                                         <BoxView HeightRequest="0.5" BackgroundColor="Silver"/>
                                 </StackLayout>
