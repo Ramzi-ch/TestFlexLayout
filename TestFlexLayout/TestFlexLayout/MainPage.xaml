@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestFlexLayout"
+             x:Class="TestFlexLayout.MainPage">
+
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            ^contentpage {
+            background-color: white;            
+            }
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    <FlexLayout Direction="Column">
+        <StackLayout Padding="30">
+            <!--<Frame HeightRequest="40">-->
+            
+            <FlexLayout x:Name="st1" Direction="Row" Margin="20,0,20,0" >
+                <Label x:Name="L1" Text="Code" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
+                <Label x:Name="L2" Text="NameAr"  FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
+                <Label x:Name="L3" Text="NameEn" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
+                <Label x:Name="L4" Text="Short NameAr" FlexLayout.Basis="20%" />
+                <Label x:Name="L5" Text="Short NameEn" FlexLayout.Basis="20%" />                
+            </FlexLayout>
+            
+                <!--</Frame>-->
+            <Frame OutlineColor="Black">
+                <ListView x:Name="ListCategorie"                          
+                          HasUnevenRows="True"
+                          SeparatorColor="Black"> 
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <FlexLayout Direction="Row">
+                                        <Label Text="{Binding Code}"  FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
+                                        <Label Text="{Binding NameAr}"  FlexLayout.Basis="20%" />
+                                        <Label Text="{Binding NameEn}"  FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
+                                        <Label Text="{Binding ShortNameAr}" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>
+                                        <Label Text="{Binding ShortNameEn}" FlexLayout.Basis="20%" LineBreakMode="CharacterWrap"/>                                        
+                                    </FlexLayout>                                        
+                                        <BoxView HeightRequest="0.5" BackgroundColor="Silver"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>                    
+                </ListView>
+            </Frame>            
+            
+        </StackLayout>
+    </FlexLayout>
+</ContentPage>
