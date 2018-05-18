@@ -20,7 +20,24 @@ namespace TestFlexLayout.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            var pixels = Resources.DisplayMetrics.WidthPixels;
+            var scale = Resources.DisplayMetrics.Density;
+
+            var dps = (double)((pixels - 0.5f) / scale);
+
+            var ScreenWidth = (int)dps;
+            BaseContentPage.screenWidth = ScreenWidth;
+
+            //RequestedOrientation = ScreenOrientation.Portrait;
+
+            pixels = Resources.DisplayMetrics.HeightPixels;
+            dps = (double)((pixels - 0.5f) / scale);
+
+            var ScreenHeight = (int)dps;
+            BaseContentPage.screenHeight = ScreenHeight;
             LoadApplication(new App());
+
+          
         }
     }
 }

@@ -13,42 +13,121 @@
             ]]>
         </StyleSheet>
     </ContentPage.Resources>
+
     <FlexLayout Direction="Column">
         <StackLayout Padding="30">
-            <!--<Frame HeightRequest="40">-->
-            
             <FlexLayout x:Name="st1" Direction="Row" Margin="20,0,20,0" >
+
                 <Label x:Name="L1" Text="Code" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
-                <Label x:Name="L2" Text="NameAr"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                <Label x:Name="L2" Text="NameAr" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
                 <Label x:Name="L3" Text="NameEn" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
                 <Label x:Name="L4" Text="Short NameAr" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
-                <Label x:Name="L5" Text="Short NameEn" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>                
+                <Label x:Name="L5" Text="Short NameEn" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+
             </FlexLayout>
-            
-                <!--</Frame>-->
+
             <Frame OutlineColor="Black">
-                <ListView x:Name="ListCategorie"                          
-                          HasUnevenRows="True"
-                          SeparatorColor="Black"> 
+                <ListView x:Name="ListCategorie" HasUnevenRows="True">
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
                                 <StackLayout>
                                     <FlexLayout Direction="Row">
-                                        <Label Text="{Binding Code}"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                                        <Label x:Name="ss" Text="{Binding Code}" FlexLayout.Basis="20%" LineBreakMode="WordWrap" BackgroundColor="LightCyan" />
                                         <Label Text="{Binding NameAr}"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
-                                        <Label Text="{Binding NameEn}"  FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
+                                        <Label Text="{Binding NameEn}" FlexLayout.Basis="20%" LineBreakMode="WordWrap"  BackgroundColor="Bisque"/>
                                         <Label Text="{Binding ShortNameAr}" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>
-                                        <Label Text="{Binding ShortNameEn}" FlexLayout.Basis="20%" LineBreakMode="WordWrap"/>                                        
-                                    </FlexLayout>                                        
-                                        <BoxView HeightRequest="0.5" BackgroundColor="Silver"/>
+                                        <Label Text="{Binding ShortNameEn}" FlexLayout.Basis="20%" LineBreakMode="WordWrap" BackgroundColor="LightCyan"/>
+                                    </FlexLayout>
+                                    <BoxView HeightRequest="0.5" BackgroundColor="Silver"/>
                                 </StackLayout>
                             </ViewCell>
                         </DataTemplate>
-                    </ListView.ItemTemplate>                    
+                    </ListView.ItemTemplate>
                 </ListView>
-            </Frame>            
-            
+            </Frame>
+
+            <Frame OutlineColor="Black">
+                <FlexLayout Direction="Row" >
+                    <Label Text="Label1" TextColor="BlueViolet"/>
+                    <Label Text="Label2" TextColor="BlueViolet"/>
+                    <Label Text="Label3" TextColor="BlueViolet"/>
+                    <Label Text="Label4" TextColor="BlueViolet"/>
+                    <Label Text="Label5" TextColor="BlueViolet"/>
+                    <Label Text="Label6" TextColor="BlueViolet"/>
+                    <Label Text="Label7" TextColor="BlueViolet"/>
+                    <Label Text="Label8" TextColor="BlueViolet"/>
+                    <Label Text="Label9" TextColor="BlueViolet"/>
+                    <Label Text="Label10" TextColor="BlueViolet"/>
+                    <Label Text="Label11" TextColor="BlueViolet"/>
+                    <Label Text="Label12" TextColor="BlueViolet"/>
+                    <Label Text="Label13" TextColor="BlueViolet"/>
+                    <Label Text="Label14" TextColor="BlueViolet"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame OutlineColor="Black">
+                <FlexLayout Direction="Row" Wrap="Wrap" >
+                    <Label Text="Label1"/>
+                    <Label Text="Label2"/>
+                    <Label Text="Label3"/>
+                    <Label Text="Label4"/>
+                    <Label Text="Label5"/>
+                    <Label Text="Label6"/>
+                    <Label Text="Label7"/>
+                    <Label Text="Label8"/>
+                    <Label Text="Label9"/>
+                    <Label Text="Label10"/>
+                    <Label Text="Label11"/>
+                    <Label Text="Label12"/>
+                    <Label Text="Label13"/>
+                    <Label Text="Label14"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame OutlineColor="Black">
+                <FlexLayout Direction="Row">
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                    <Image Source="radiobuttonchecked.png"/>
+                </FlexLayout>
+            </Frame>
+
+            <Frame OutlineColor="Black">
+                <FlexLayout Direction="Row" Wrap="Wrap">
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                    <Image Source="gallery.png"/>
+                </FlexLayout>
+            </Frame>
+            <FlexLayout Direction="Row">
+
+                <Label Text="Name" FlexLayout.Basis="30%"/>
+                <Entry FlexLayout.Basis="80%"/>
+
+            </FlexLayout>
         </StackLayout>
     </FlexLayout>
 </ContentPage>
